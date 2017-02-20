@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app >
+    
+    <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/:angular.min.js"> </script>
+    <style> 
+        
+    h1{color:brown; }
+    .id1{height: 25px; width: 100px; }
+        
+       
+        
+    </style>
+    </head>
+    <style> 
+    h1{color:brown; }
+    h2{color:purple;}
+    .id1{height: 25px; width: 100px; margin-right: 40px;}
+    body{background-image:url("images(2).jpg"); background-repeat: no-repeat;background-size: 1100px 550px;align-content: center;}
+    
+        
+</style>
+    
+     <body background="drkrainbow.gif" bgcolor="#333333"> 
+<div class="container">
+    <div class="row">
+        <center>
+            <div ng-app="">
+            <h1>Login page</h1><br>
+
+                <form>
+            <b> Username: </b>  <input type="text"  id="Username" name="Username" ><br><br>
+                    
+             <b>  Password:</b> <input type="password"  id="password" name="password"><br><br>
+                
+                    <br>    <br>   <label><input id="rememberme" name="rememberme" value="remember" type="checkbox" /> &nbsp;Keep me logged in</label>
+           <br> <br> <a href="forgotpassword.html">Forgot your Password?</a> <br>
+                
+            <br>    <input class="id1"  onclick="location.href='home.html'" type="button" name="login" value="login" id="login"></input>
+                </form>
+        </center>
+    </div>
+</div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript" src="login_script.js">
+    <script type="text/javascript">
+$("#login").click(function() {
+        localStorage.setItem("Username", document.getElementById('Username').value);
+        localStorage.setItem("password", document.getElementById('password').value);
+      
+        window.location.href = "home.html";
+    });
+
+</script>
+
+
+
